@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#status {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.1),
+              0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cell:hover {
+  transform: scale(1.07);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cell.x {
+  color: #22c55e;
+}
+
+.cell.o {
+  color: #38bdf8;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
