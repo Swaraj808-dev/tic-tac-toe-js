@@ -8,14 +8,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
   background: linear-gradient(135deg, #020617, #0f172a);
   color: white;
 }
 
 h1 {
-  font-size: 2.7rem;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
   margin-bottom: 10px;
+  text-align: center;
   background: linear-gradient(90deg, #22c55e, #38bdf8, #a855f7);
   background-clip: text;
   -webkit-background-clip: text;
@@ -24,15 +26,18 @@ h1 {
 
 #status {
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 500;
+  text-align: center;
 }
 
 .board {
+  width: 92vw;
+  max-width: 420px;
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  padding: 20px;
+  padding: 18px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -40,14 +45,14 @@ h1 {
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  aspect-ratio: 1/1;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -69,8 +74,9 @@ h1 {
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px 24px;
+  margin-top: 22px;
+  padding: 12px 28px;
+  font-size: 1rem;
   border-radius: 999px;
   border: none;
   background: linear-gradient(90deg, #22c55e, #38bdf8);
